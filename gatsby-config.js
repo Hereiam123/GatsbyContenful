@@ -69,9 +69,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Starter Blog`,
