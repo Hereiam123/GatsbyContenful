@@ -1,8 +1,5 @@
 const path = require(`path`)
 
-//Removing for another functional call
-//const { createFilePath } = require(`gatsby-source-filesystem`)
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -46,17 +43,3 @@ exports.createPages = ({ graphql, actions }) => {
     return null
   })
 }
-
-//No longer needed for contentful
-/*exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
-}*/
