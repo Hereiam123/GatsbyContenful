@@ -12,6 +12,7 @@ const Post = styled.div`
   display: flex;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s ease;
   &:hover {
     background-color: #f2f2f2;
   }
@@ -42,23 +43,24 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.title || node.slug
           return (
-            <Post key={node.slug}>
-              <PostImage>
-                {node.image !== null ? <Img fluid={node.image.fluid} /> : null}
-              </PostImage>
-              <PostText>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <p>{node.subtitle}</p>
-              </PostText>
-            </Post>
+            <Link style={{ boxShadow: `none` }} to={node.slug}>
+              <Post key={node.slug}>
+                <PostImage>
+                  {node.image !== null ? (
+                    <Img fluid={node.image.fluid} />
+                  ) : null}
+                </PostImage>
+                <PostText>
+                  <h2>{title}</h2>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  />
+                  <p>{node.subtitle}</p>
+                </PostText>
+              </Post>
+            </Link>
           )
         })}
       </Layout>
