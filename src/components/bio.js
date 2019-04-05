@@ -21,7 +21,8 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              padding: rhythm(2.5),
+              backgroundColor: `#1565c0`,
             }}
           >
             <Image
@@ -37,13 +38,14 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in Orlando, FL building websites.
+            <span>
+              Written by <strong>{author}</strong> who lives and works in
+              Orlando, FL building websites.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
               </a>
-            </p>
+            </span>
           </div>
         )
       }}

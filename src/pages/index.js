@@ -10,11 +10,16 @@ import { rhythm } from "../utils/typography"
 
 const Post = styled.div`
   display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: #f2f2f2;
+  }
 `
 
 const PostImage = styled.div`
   flex: 25%;
-  margin-right: 1rem;
+  margin: 1rem;
 `
 
 const PostText = styled.div`
