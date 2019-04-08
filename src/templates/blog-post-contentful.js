@@ -16,7 +16,11 @@ class BlogPostContentfulTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.title} description={post.subtitle} />
         <h1>{post.title}</h1>
-        {post.image !== null ? <Img fluid={post.image.fluid} /> : null}
+        {post.image !== null ? (
+          <Img fluid={post.image.fluid} />
+        ) : (
+          <img src="https://firebasestorage.googleapis.com/v0/b/invue-7e579.appspot.com/o/Cheese-800x416.jpg?alt=media&token=579afc2b-332d-4102-8fc5-06c82ef4de5a" />
+        )}
         <div
           dangerouslySetInnerHTML={{
             __html: post.content.childContentfulRichText.html,

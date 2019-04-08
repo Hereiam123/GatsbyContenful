@@ -23,6 +23,7 @@ function Bio() {
               display: `flex`,
               padding: rhythm(2.5),
               backgroundColor: `#1565c0`,
+              marginTop: `50px`,
             }}
           >
             <Image
@@ -42,7 +43,7 @@ function Bio() {
               Written by <strong>{author}</strong> who lives and works in
               Orlando, FL building websites.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              <a href={`https://twitter.com/${social.twitter}`} target="_blank">
                 You should follow him on Twitter
               </a>
             </span>

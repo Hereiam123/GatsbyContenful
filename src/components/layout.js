@@ -14,8 +14,12 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            marginBottom: rhythm(0.05),
             marginTop: 0,
+            backgroundColor: `#1565c0`,
+            position: `fixed`,
+            top: 0,
+            width: `100%`,
           }}
         >
           <Link

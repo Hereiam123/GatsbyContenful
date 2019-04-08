@@ -48,7 +48,9 @@ class BlogIndex extends React.Component {
                 <PostImage>
                   {node.image !== null ? (
                     <Img fluid={node.image.fluid} />
-                  ) : null}
+                  ) : (
+                    <img src="https://firebasestorage.googleapis.com/v0/b/invue-7e579.appspot.com/o/Cheese-800x416.jpg?alt=media&token=579afc2b-332d-4102-8fc5-06c82ef4de5a" />
+                  )}
                 </PostImage>
                 <PostText>
                   <h2>{title}</h2>
